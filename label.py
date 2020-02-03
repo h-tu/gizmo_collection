@@ -2,34 +2,33 @@
 
 def main():
     option = int(input('Do you have a coordinate or a label?\n0 for label\n1 for coordinate\n'))
-    a = {0: 1}
-    d = 0
+    a = [0]
     i = 1
     j = 1
     if option == 0: # label
         label = int(input('Enter your label\n'))
-        while (len(a.keys()) < label):
-            if d != 0:
+        while len(a) < label:
+            if a[-1] != 0:
                 i, j = nextp(i, j)
             a = add(i,j,a)
-            d = 1
         print("({},{}) has value {} and has label {}\n".format(i,j,i/j, label))
 
     else: # coordinate
         tarx = float(input('Enter X value\n'))
         tary = float(input('Enter Y value\n'))
         tarvalue = tarx/tary
-        print(tarvalue)
-        while tarvalue not in a.keys():
-            if d != 0:
+        while tarvalue not in a:
+            if a[-1] != 0:
                 i, j = nextp(i, j)
             a = add(i,j,a)
-            d = 1
-        print("({},{}) has value {} and has label {}\n".format(int(tarx), int(tary), tarvalue, a[tarvalue]))
+        print("({},{}) has value {} and has label {}\n".format(int(tarx), int(tary), tarvalue, a.index(tarvalue)+1))
     # print(a)
     onemore = int(input('Check another one? \n0 for No \n1 for YES\n'))
     if onemore:
+        print('\n')
         main()
+    else:
+        print('Exiting program...\n')
 
 def nextp(x, y):
     if y == 1:
@@ -45,8 +44,8 @@ def nextp(x, y):
 def add(x, y, dict):
     value = x / y
     # print(value)
-    if value not in dict.keys():
-        dict[value] = len(dict.keys())+1
+    if value not in dict:
+        dict.append(value)
     return dict
 
 main()

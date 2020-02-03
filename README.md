@@ -1,2 +1,2 @@
 # engineering
-Random codes done for engineering class
+Random codes done for engineering classes

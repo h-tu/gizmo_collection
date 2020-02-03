@@ -1,8 +1,7 @@
 # Hongyu Tu 2020/02/03
 
 def main():
-    option = input('Do you have a coordinate or a label?\n0 for label\n1 for coordinate\n')
-    option = int(option)
+    option = int(input('Do you have a coordinate or a label?\n0 for label\n1 for coordinate\n'))
     a = {0: 1}
     d = 0
     i = 1

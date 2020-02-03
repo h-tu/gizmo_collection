@@ -3,23 +3,25 @@
 def main():
     option = int(input('Do you have a coordinate or a label?\n0 for label\n1 for coordinate\n'))
     a = [0]
-    i = 1
+    i = 0
     j = 1
     if option == 0: # label
-        label = int(input('Enter your label\n'))
+        label = int(input('Enter the label: \n'))
+        while label < 1:
+            label = int(input('Label can\'t be less than zero, renter the label: \n'))
         while len(a) < label:
-            if a[-1] != 0:
-                i, j = nextp(i, j)
+            i, j = nextp(i, j)
             a = add(i,j,a)
         print("({},{}) has value {} and has label {}\n".format(i,j,i/j, label))
 
     else: # coordinate
-        tarx = float(input('Enter X value\n'))
-        tary = float(input('Enter Y value\n'))
+        tarx = float(input('Enter X value: \n'))
+        tary = float(input('Enter Y value: \n'))
+        while tary < 1:
+            tary = int(input('Y can\'t be less than or equal to zero, renter Y value: \n'))
         tarvalue = tarx/tary
         while tarvalue not in a:
-            if a[-1] != 0:
-                i, j = nextp(i, j)
+            i, j = nextp(i, j)
             a = add(i,j,a)
         print("({},{}) has value {} and has label {}\n".format(int(tarx), int(tary), tarvalue, a.index(tarvalue)+1))
     # print(a)
@@ -32,7 +34,9 @@ def main():
 
 def nextp(x, y):
     if y == 1:
-        if x < 0:
+        if x == 0:
+            return (1,1)
+        elif x < 0:
             return (1, abs(x) + abs(y))
         else:
             return (-1, x)

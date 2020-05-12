@@ -69,7 +69,8 @@ while length(sorted_val) > 1
     n = n + 1;
 end
 
-tree = nodes{1,4};
+curry = size(nodes);
+tree = nodes{1,curry(2)};
 
 dict = step(tree, "");
 

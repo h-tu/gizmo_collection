@@ -7,6 +7,8 @@ def get_answer(sec, question):
     text = 'section {} question {} -- [ '.format(sec, question) + answer[sec-1][question-1] + ' ]'
     return text
 
+answer = []
+
 if not os.path.exists("key.npy"):
     print('Creating key.npy...')
     f = open("TCkey.txt", "r", encoding="utf8")

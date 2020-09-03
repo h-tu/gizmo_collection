@@ -5,15 +5,15 @@ I don't want to see the answer for the next question when I am checking the answ
 
 ## Files
 
-- TCkey.txt 
+- [TCkey.txt](https://github.com/h-tu/gizmo_collection/blob/master/gretc/TCkey.txt)
     
     Downloaded answer from website. Unprocessed. To get the GRE TC answer I'm using, go to this [link](https://mp.weixin.qq.com/s/xaG6s4ETujJoaJpoJ7pcbw)
 
-- key.npy
+- [key.npy](https://github.com/h-tu/gizmo_collection/blob/master/gretc/key.npy)
 
     Processed answer that is a numpy 2D array. First layer is section and second layer is question.
 
-- answer.py
+- [answer.py](https://github.com/h-tu/gizmo_collection/blob/master/gretc/answer.py)
 
     Code to process TCkey.txt and get out answers.
 

@@ -13,3 +13,6 @@ Random codes done for my classes
     
     HW from my CMSC 320.
     
+- huff.m
+    
+    Implementation of huffman encoding with matlab.

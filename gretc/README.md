@@ -28,9 +28,11 @@ python3 answer.py
 1. The code will automatically check if processed numpy array is available. If so, it will load it, else, it will process the raw text file.
 
     - key.npy exist
+    
     ![img1](img/1.PNG)
 
     - key.npy doesn't exist
+    
     ![img6](img/6.PNG)
 
 2. Enter section # and question # seperated by a space when prompted. 

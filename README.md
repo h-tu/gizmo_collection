@@ -1,5 +1,6 @@
-# my_tools
-Random codes done for my classes
+# gizmo_collection
+
+Random codes done for my classes and more!
 
 - [greTC](https://github.com/h-tu/ENEE_stuff/blob/master/gretc/) 
     
@@ -13,6 +14,6 @@ Random codes done for my classes
     
     HW from my CMSC 320.
     
-- huff.m
+- [huff.m](https://github.com/h-tu/gizmo_collection/blob/master/huff.m)
     
-    Implementation of huffman encoding with matlab.
+    Implementation of huffman encoding with Matlab.

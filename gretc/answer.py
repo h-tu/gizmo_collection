@@ -38,7 +38,9 @@ question = int(b)
 
 
 while True:
-    print(get_answer(section, question))
+    sys.stdout.write("\r{}".format(get_answer(section, question)))
+    sys.stdout.flush()
+    # print(get_answer(section, question))
     if question  == 10:
         section += 1
         question = 0

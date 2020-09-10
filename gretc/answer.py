@@ -29,9 +29,12 @@ if not os.path.exists("key.npy"):
     
     answer = np.array(answer)
     np.save('key.npy', answer)
+
+    print('key.npy created, ready for use...')
 else:
     print('Loading key.npy...')
     answer = np.load('key.npy')
+    print('key.npy loaded, ready for use...')
 
 a, b = input("Enter section and number: ").split() 
 section = int(a)

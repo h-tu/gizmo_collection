@@ -1,10 +1,11 @@
 import os
+import sys
 import numpy as np
 
 # get_answer(34,10)
 
 def get_answer(sec, question):
-    text = 'section {} question {} -- [ '.format(sec, question) + answer[sec-1][question-1] + ' ]'
+    text = 'section {:03d} question {:02d} -- [ '.format(sec, question) + answer[sec-1][question-1] + ' ]'
     return text
 
 answer = []

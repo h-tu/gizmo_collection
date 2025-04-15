@@ -3,7 +3,7 @@ import re
 from tqdm import tqdm
 
 pattern = r"[A-Za-z]+(?:[-_][A-Za-z]+)*|\d+(?:[-_]\d+)*"
-ignore_folder = ['SONE', 'kir', 'fix_all_name.py']
+ignore_folder = ['fix_all_name.py']
 
 def fix_name(i):
     tmp = i.split('.')
